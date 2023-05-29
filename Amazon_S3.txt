@@ -1,0 +1,66 @@
+Amazon S3
+
+S3 is the service and bucket is a component of it. 
+Buckets are containers for data storage in S3
+
+There are set of rules in creating the Bucket
+bucket name should be in lower cases.
+bucket name can start with name/number.
+It may contain Periods ( ., - )
+
+In AWS serverless architecture we don't have any physical paths (to store any files/templates).
+At the time of creating bucket we need to enable the versioning option.
+
+Versioning is means of keeping multiple variants of an object in the same Bucket.
+Based on version id we can pull the objects (files) from bucket.
+
+You can use versioning to preserve, retrieve and restore every version of every object in Amazon S3 Bucket.
+If amazon receives multiple write requests for the same object simultaneously, it stores all of the objects. 
+
+After uploading a file at S3 Bucket, to see the content inside the file we need to click Object Actions Open as it re-direct to the pre-signed URL having the file.
+Pre-Signed URL is valid only limited time which we set.
+
+After enabling the versioning, you might need to update your lifecycle rules to manage previous versions of objects.
+
+For others to access your objects, you will need to explicitly grant them permissions
+
+This lifecycle categorize our old data into packs like standard, glaciar etc.
+There are price variations for the levels of services they offer.
+
+To delete any file from the S3 Bucket it requires a command 'delete' at the time of deleting.
+
+Different types of storage classes Standard, Standard IA, One Zone IA, Glacier, Glacier Deep Archive
+
+Life cycle management based on the Types of the S3 Bucketing stucture.
+Life cycle for Complete Bucket or Single file ( called as prefix ).
+
+Life cycle for all objects inside bucket.
+
+Transitioning of Files (Objects)
+To move from one category to another it requires minimum 30 days. (Standar to Standard IA).
+
+
+
+If go for Programming you need to add the AWSSDK.S3 for development
+add the Maven dependancy at POM.xml
+
+if you use the Management console (trhough the AWS UI) you can Create/Delete any file
+
+While working withe the AWS S3 you required below at programming level.
+
+Connection Strings (How we connected with DB in similar way we required below)
+Access Key   
+Secret Key
+Bucket Name
+region name
+IAmazonS3 s3Client (Interface)
+
+To create the client object
+
+s3Client = new AmazonS3Client(accessKey, secretKey, bucketRegion);
+
+
+
+
+
+
