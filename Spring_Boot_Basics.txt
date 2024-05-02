@@ -1,0 +1,30 @@
+Spring Boot
+
+Spring Boot starter parent
+1. Provides default configurations to spring boot applications (inside the dependency pom it has the versions).
+
+	Default java version for spring boot is 1.8 (if you want to override the version define it on the pom.xml file)
+	Ex:
+	<properties>
+		<java.version>16</java.version>
+	</properties>
+
+2.	By default the Spring Intializr add this to spring boot project
+	Vesion defined at starter parent, 
+
+	ex: 
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>2.5.0</version>
+	
+below are the starters (versions of below starters are managed by spring boot starter parent)	
+
+org.springframework.boot.spring-boot-dependencies.2.5.0.pom
+	
+	ex: Spring boot starter web
+		Spring boot starter security
+		Spring boot starter data jpa
+		Spring boot starter test
+
+3.	It manages the versions of all the dependancies.
+4.	Maven plugin management.
