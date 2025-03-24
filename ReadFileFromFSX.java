@@ -93,10 +93,6 @@ public class ReadFileFromFSX {
 		}	
 	}
 	
-	public static boolean stringCheck2(String test1, String test2) {
-	    return Optional.ofNullable(test1).filter(t -> t.equals(test2)).isPresent();
-	}
-	
 	public static Set<String> listFilesUsingFilesList(String dir) throws IOException {
 	    try (Stream<Path> stream = Files.list(Paths.get(dir))) {
 	        return stream
